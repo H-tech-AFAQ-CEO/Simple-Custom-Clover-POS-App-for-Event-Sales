@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:layout_marginBottom="8dp"
+    android:background="#FFFFFF"
+    android:elevation="2dp">
+
+    <TextView
+        android:id="@+id/textViewEmoji"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="🍔"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="#F2F0EB"
+        android:layout_marginEnd="12dp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item Name"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#1A1A2E" />
+
+        <TextView
+            android:id="@+id/textViewPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$0.00 each"
+            android:textSize="12sp"
+            android:textColor="#6B6B7B" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewQuantity"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#1A1A2E"
+        android:gravity="center"
+        android:layout_marginEnd="12dp" />
+
+    <TextView
+        android:id="@+id/textViewTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0.00"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#E8A838" />
+
+</LinearLayout>

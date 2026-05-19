@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F8F6F2">
+
+    <!-- Toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.EventPOS.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#1A1A2E"
+            app:titleTextColor="#FFFFFF"
+            app:navigationIconTint="#FFFFFF"
+            app:popupTheme="@style/Theme.EventPOS.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Payment Status -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp">
+
+        <TextView
+            android:id="@+id/textViewAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$0.00"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:textColor="#1A1A2E"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/textViewItems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 items"
+            android:textSize="16sp"
+            android:textColor="#6B6B7B"
+            android:layout_marginBottom="32dp" />
+
+        <TextView
+            android:id="@+id/textViewStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Initializing payment..."
+            android:textSize="18sp"
+            android:textColor="#2D9B6F"
+            android:layout_marginBottom="48dp" />
+
+        <!-- Payment Methods -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/buttonTapToPay"
+                android:layout_width="280dp"
+                android:layout_height="64dp"
+                android:layout_marginBottom="16dp"
+                android:text="📱 Tap to Pay"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#1A1A2E"
+                android:enabled="false"
+                style="@style/Widget.MaterialComponents.Button" />
+
+            <Button
+                android:id="@+id/buttonInsertCard"
+                android:layout_width="280dp"
+                android:layout_height="64dp"
+                android:layout_marginBottom="16dp"
+                android:text="🎯 Insert Card"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#1A1A2E"
+                android:enabled="false"
+                style="@style/Widget.MaterialComponents.Button" />
+
+            <Button
+                android:id="@+id/buttonSwipeCard"
+                android:layout_width="280dp"
+                android:layout_height="64dp"
+                android:text="💳 Swipe Card"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#1A1A2E"
+                android:enabled="false"
+                style="@style/Widget.MaterialComponents.Button" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Terminal Status -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="#FFFFFF"
+        android:gravity="center_vertical">
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="#2D9B6F"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clover Terminal Ready"
+            android:textSize="14sp"
+            android:textColor="#2D9B6F"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>
